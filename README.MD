@@ -31,6 +31,22 @@ Those shall be housed here.
 
 TBA
 
-### License
+## Environment
+
+This project will broadly use curl-cffi for client requests, camoufox for browsers and bs4 for parsing.
+Reasoning:
+- curl-cffi has a largely requests-compatible API, with added measures for TLS fingerprinting
+- camoufox is largely playwright-compatible API, with advanced options to avoid bot detection
+- bs4 (with lxml) is fairly easy to use, and with lxml it becomes much faster
+
+Recommended use: [uv](https://docs.astral.sh/uv/getting-started/installation/#pypi) for package management
+
+```
+uv venv --python 3.12
+source .venv/bin/activate
+uv pip install -r requirements.txt
+```
+
+## License
 
 MIT
